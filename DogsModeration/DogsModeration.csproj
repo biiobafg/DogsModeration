@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DD73933A-2671-4093-8E1A-D81B0EEAC194}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DogsModeration</RootNamespace>
+    <AssemblyName>DogsModeration</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>..\..\..\Libraries\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\Libraries\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="com.rlabrecque.steamworks.net">
+      <HintPath>..\..\..\Libraries\com.rlabrecque.steamworks.net.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper.v2.0.90.36046">
+      <HintPath>..\..\..\Libraries\Dapper.v2.0.90.36046.dll</HintPath>
+    </Reference>
+    <Reference Include="LiteDB0">
+      <HintPath>..\..\..\Libraries\LiteDB0.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.v9.0.0.0">
+      <HintPath>..\..\..\Libraries\MySql.Data.v9.0.0.0.dll</HintPath>
+    </Reference>
+    <Reference Include="netstandard" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\Libraries\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp">
+      <HintPath>..\..\..\Libraries\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="RestStandard">
+      <HintPath>..\..\..\Libraries\RestStandard.dll</HintPath>
+    </Reference>
+    <Reference Include="Rocket.API">
+      <HintPath>..\..\..\Libraries\Rocket.API.dll</HintPath>
+    </Reference>
+    <Reference Include="Rocket.Core">
+      <HintPath>..\..\..\Libraries\Rocket.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Rocket.Unturned">
+      <HintPath>..\..\..\Libraries\Rocket.Unturned.dll</HintPath>
+    </Reference>
+    <Reference Include="RocketExtensions">
+      <HintPath>..\..\..\Libraries\RocketExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="RocketRegions">
+      <HintPath>..\..\..\Libraries\RocketRegions.dll</HintPath>
+    </Reference>
+    <Reference Include="SDG.Glazier.Runtime">
+      <HintPath>..\..\..\Libraries\SDG.Glazier.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="SDG.HostBans.Runtime">
+      <HintPath>..\..\..\Libraries\SDG.HostBans.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="SDG.NetPak.Runtime">
+      <HintPath>..\..\..\Libraries\SDG.NetPak.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="SDG.NetTransport">
+      <HintPath>..\..\..\Libraries\SDG.NetTransport.dll</HintPath>
+    </Reference>
+    <Reference Include="ShimmyMySherbet.MySQL.EF.v1.8.8.0">
+      <HintPath>..\..\..\Libraries\ShimmyMySherbet.MySQL.EF.v1.8.8.0.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libraries\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Parallel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ThreadHelper">
+      <HintPath>..\..\..\Libraries\ThreadHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="Ubiety.Dns.Core.v2.2.1.0">
+      <HintPath>..\..\..\Libraries\Ubiety.Dns.Core.v2.2.1.0.dll</HintPath>
+    </Reference>
+    <Reference Include="UniTask">
+      <HintPath>..\..\..\Libraries\UniTask.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>..\..\..\Libraries\Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\Libraries\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\Libraries\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>..\..\..\Libraries\UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>..\..\..\Libraries\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ScreenCaptureModule">
+      <HintPath>..\..\..\Libraries\UnityEngine.ScreenCaptureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>..\..\..\Libraries\UnityEngine.UnityWebRequestModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnturnedDat">
+      <HintPath>..\..\..\Libraries\UnturnedDat.dll</HintPath>
+    </Reference>
+    <Reference Include="websocket-sharp">
+      <HintPath>..\..\..\Libraries\websocket-sharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Commands\Kick.cs" />
+    <Compile Include="Commands\Ban.cs" />
+    <Compile Include="Commands\Unban.cs" />
+    <Compile Include="Config.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="Models\BanCheck.cs" />
+    <Compile Include="Models\SqlInfo.cs" />
+    <Compile Include="Models\Webhook.cs" />
+    <Compile Include="OtherStuff\DatabaseManager.cs" />
+    <Compile Include="OtherStuff\Ext.cs" />
+    <Compile Include="OtherStuff\ModerationStuff.cs" />
+    <Compile Include="OtherStuff\Utils.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
