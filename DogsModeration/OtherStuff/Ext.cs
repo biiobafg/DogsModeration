@@ -16,7 +16,6 @@ namespace DogsModeration.OtherStuff
             {
                 using MySql.Data.MySqlClient.MySqlConnection con = database.Connection;
                 await con.OpenAsync();
-                // holy fuck its beautiful
                 string qry = @"
                         SELECT 
                             b.BanID,
@@ -59,7 +58,7 @@ namespace DogsModeration.OtherStuff
                 return null;
             }
         }
-        // add player then add the isp and countrycode (so i dont have to trycatch getting the isp info and ensure that it actually inserts it
+        // add player then add the isp and countrycode (so i dont have to do some other stupid stuff to do it)
         public static async Task<bool> AddPlayer(this DatabaseManager database, ulong steamid,
         string CharName,
         string steamname,
@@ -111,8 +110,6 @@ namespace DogsModeration.OtherStuff
 
         public static async Task<bool> UpdateISP(this DatabaseManager database, ulong steamid, string ip)
         {
-            // this should be moved to another class and just have this for only being to update the players isp once we have that, but i'll just call this with configureawait(false)
-            // then once its downloaded the isp info it'll update the database, Right?
             try
             {
                 string json;
